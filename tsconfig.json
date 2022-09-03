@@ -12,7 +12,6 @@
         "outDir": "dist/js",
         "rootDirs": ["src/index.ts", "dist/js"],
         "resolveJsonModule": true,
-        // "esModuleInterop": true
     },
     "include": ["src/*.ts"]
 }
