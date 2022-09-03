@@ -16,8 +16,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 ## Overview
 
----
-
 ### The challenge
 
 Users should be able to:
@@ -35,8 +33,6 @@ Users should be able to:
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
-
----
 
 ### Built with
 
