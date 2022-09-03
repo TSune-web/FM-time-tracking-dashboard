@@ -1,0 +1,85 @@
+@use "utils";
+
+body {
+    display: grid;
+    place-items: center;
+    // (card titles e.g. Work, Play)
+    width: 100%;
+    min-height: 100vh;
+    font-size: 1.8em;
+    font-family: 'Rubik', sans-serif;
+    font-weight: utils.$fw-mid;
+    background-color: utils.$very-dark-blue;
+}
+
+h2,
+h3,
+p,
+span {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.card,
+.profile {
+    border-radius: 1.5rem;
+}
+
+.dark {
+    background-color: utils.$dark-blue;
+}
+
+input[type=button] {
+    color: utils.$desaturated-blue;
+    font-weight: utils.$fw-light;
+    cursor: pointer;
+
+    &.selected {
+        color: white;
+    }
+
+    &:hover,
+    &:focus {
+        color: white;
+    }
+}
+
+.person {
+    background-color: utils.$blue;
+    color: white;
+}
+
+.work {
+    background: url("../../dist/images/icon-work.svg") 95% -10% no-repeat utils.$orange;
+}
+.play {
+    background: url("../../dist/images/icon-play.svg") 95% -10% no-repeat utils.$soft-blue;
+}
+.study {
+    background: url("../../dist/images/icon-study.svg") 95% -10% no-repeat utils.$red;
+}
+.exercise {
+    background: url("../../dist/images/icon-exercise.svg") 95% -10% no-repeat utils.$lime-green;
+}
+.social {
+    background: url("../../dist/images/icon-social.svg") 95% -10% no-repeat utils.$violet;
+}
+.selfcare {
+    background: url("../../dist/images/icon-self-care.svg") 95% -10% no-repeat utils.$yellow;
+}
+
+.ellipsis-wrapper {
+    display: block;
+    width: 2.15rem;
+    background: url("../../dist/images/icon-ellipsis.svg") no-repeat;
+    background-size: contain;
+    transform: translateY(1rem);
+    cursor: pointer;
+}
+
+.content {
+    cursor: pointer;
+}

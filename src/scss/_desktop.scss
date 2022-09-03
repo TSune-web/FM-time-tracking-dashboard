@@ -1,0 +1,158 @@
+@use "utils";
+
+@media screen and (min-width: utils.$tablet) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 1rem;
+        width: 100%;
+        max-width: 110rem;
+        margin-top: 0;
+    }
+
+    .profile {
+        // row-start/ col-start/ row-end/ col-end
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .card {
+        width: 100%;
+        margin-top: 0;
+
+        &:nth-of-type(2) { grid-area: 2 / 1 / 3 / 2; }
+        &:nth-of-type(3) { grid-area: 2 / 2 / 3 / 3; }
+        &:nth-of-type(4) { grid-area: 3 / 1 / 4 / 2; }
+        &:nth-of-type(5) { grid-area: 3 / 2 / 4 / 3; }
+        &:nth-of-type(6) { grid-area: 4 / 1 / 5 / 2; }
+        &:nth-of-type(7) { grid-area: 4 / 2 / 5 / 3; }
+    }
+
+    .content {
+        .content__header {
+            .ellipsis-wrapper:hover {
+                transform: scale(1.1) translateY(0.95rem);
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: utils.$laptop) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        place-items: center;
+        column-gap: 3rem;
+        row-gap: 3rem;
+        width: 100%;
+        max-width: 111rem;
+        margin-top: 2.85rem;
+        padding: 0;
+    }
+
+    .profile {
+        // row-start/ col-start/ row-end/ col-end
+        grid-area: 1 / 1 / 3 / 2;
+        margin-right: 0.8rem;
+    }
+
+    .card:nth-of-type(2) { grid-area: 1 / 2 / 2 / 3; }
+    .card:nth-of-type(3) { grid-area: 1 / 3 / 2 / 4; }
+    .card:nth-of-type(4) { grid-area: 1 / 4 / 2 / 5; }
+    .card:nth-of-type(5) { grid-area: 2 / 2 / 3 / 3; }
+    .card:nth-of-type(6) { grid-area: 2 / 3 / 3 / 4; }
+    .card:nth-of-type(7) { grid-area: 2 / 4 / 3 / 5; }
+
+    .person-wrapper {
+        width: 103%;
+        .person {
+            flex-direction: column;
+            .person__img {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding-top: 3.45rem;
+                padding-left: 2.75rem;
+                img {
+                    width: 4.75em;
+                }
+            }
+            .person__info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 75%;
+                margin-left: 1.4rem;
+                margin-bottom: 6rem;
+                padding: 1rem 0 2rem 1.75rem;
+
+                p.name {
+                    padding-top: 0.4rem;
+                    font-size: 4rem;
+                }
+            }
+
+        }
+    }
+
+    .time-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+        row-gap: 2.2rem;
+        padding-top: 2.3rem;
+        padding-left: 3.3rem;
+        border-radius: 1.25rem;
+    
+        li {
+            padding: 0;
+            font-size: 1.85rem;
+
+            &:nth-child(1) { padding-left: 0; }
+            &:nth-child(2) { padding-left: 0; }
+            &:nth-child(3) {
+                padding-left: 0;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .content-wrapper {
+        height: 24.5rem;
+        padding-top: 4.75rem;
+        border-radius: 1.25rem;
+    }
+
+    .content {
+        height: 100%;
+        padding: 0 3.5rem 0 3.2rem;
+        background-color: utils.$dark-blue;
+        border-radius: 1.25rem;
+
+        .content__header {
+            padding-top: 2.65rem;
+        }
+        
+        .content__body {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            
+            padding-top: 1.85rem;
+    
+            .current {
+                font-size: 5.5rem;
+                font-weight: utils.$fw-light;
+            }
+            .previous {
+                padding-top: 0.85rem;
+                font-size: 1.56rem;
+                font-weight: utils.$fw-light;
+                color: utils.$pale-blue;
+            }
+        }
+    }
+}
