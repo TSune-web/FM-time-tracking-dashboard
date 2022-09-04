@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Time Tracking Dashboard](https://tsune-web.github.io/FM-time-tracking-dashboard/dist/index.html)
+- Live Site URL: [Time Tracking Dashboard](https://tsune-web.github.io/FM-time-tracking-dashboard/)
 
 ## My process
 
